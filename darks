@@ -253,6 +253,7 @@ function tab:AddSlider(sliderName, minValue, maxValue, defaultValue, callback)
         Value = defaultValue or minValue,
         Callback = callback
     })
+end
 
     function Tab:CreateInput(placeholder, default, callback)
         local Box = Instance.new("TextBox", TabContent)

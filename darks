@@ -244,6 +244,16 @@ function Darks:CreateTab(name)
         return Frame
     end
 
+function tab:AddSlider(sliderName, minValue, maxValue, defaultValue, callback)
+    table.insert(tab.Components, {
+        Type = "Slider",
+        Name = sliderName,
+        Min = minValue,
+        Max = maxValue,
+        Value = defaultValue or minValue,
+        Callback = callback
+    })
+
     function Tab:CreateInput(placeholder, default, callback)
         local Box = Instance.new("TextBox", TabContent)
         Box.PlaceholderText = placeholder or "Enter text..."
